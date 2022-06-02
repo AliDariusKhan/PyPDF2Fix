@@ -792,8 +792,8 @@ class PdfReader:
             elif isinstance(dest, str) and dest in self._namedDests:
                 outline = self._namedDests[dest]
                 outline[NameObject("/Title")] = title  # type: ignore
-            else:
-                raise PdfReadError("Unexpected destination %r" % dest)
+            # else:
+            #     raise PdfReadError("Unexpected destination %r" % dest)
         return outline
 
     @property
